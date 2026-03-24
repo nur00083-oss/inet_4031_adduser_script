@@ -14,6 +14,11 @@ for line in sys.stdin:
     # Split input line by colon
     parts = line.split(":")
 
+    # Make sure the line has exactly 5 fields
+    if len(parts) != 5:
+        continue
+
+    # Assign values from input line
     username = parts[0]
     password = parts[1]
     lastname = parts[2]
